@@ -87,8 +87,6 @@ class ComposerStaticInit7b20e4d61e2f88170fbbc44c70d38a1f
         'C' => 
         array (
             'Cron\\' => 5,
-            'Chunlei\\Math\\' => 13,
-            'Chunlei\\Alipay\\' => 15,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -224,14 +222,6 @@ class ComposerStaticInit7b20e4d61e2f88170fbbc44c70d38a1f
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
-        'Chunlei\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/chunlei/math/src/Math',
-        ),
-        'Chunlei\\Alipay\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/chunlei/alipay/src/Alipay',
-        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -304,14 +294,6 @@ class ComposerStaticInit7b20e4d61e2f88170fbbc44c70d38a1f
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
-        'Chunlei\\Alipay\\AopClient' => __DIR__ . '/..' . '/chunlei/alipay/src/Alipay/AopClient.php',
-        'Chunlei\\Alipay\\AopEncrypt' => __DIR__ . '/..' . '/chunlei/alipay/src/Alipay/AopEncrypt.php',
-        'Chunlei\\Alipay\\EncryptParseItem' => __DIR__ . '/..' . '/chunlei/alipay/src/Alipay/EncryptParseItem.php',
-        'Chunlei\\Alipay\\EncryptResponseData' => __DIR__ . '/..' . '/chunlei/alipay/src/Alipay/EncryptResponseData.php',
-        'Chunlei\\Alipay\\SignData' => __DIR__ . '/..' . '/chunlei/alipay/src/Alipay/SignData.php',
-        'Chunlei\\Math\\Add' => __DIR__ . '/..' . '/chunlei/math/src/Math/Add.php',
-        'Chunlei\\Math\\BB' => __DIR__ . '/..' . '/chunlei/math/src/Math/BB.php',
-        'Chunlei\\Math\\CC' => __DIR__ . '/..' . '/chunlei/math/src/Math/CC.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',

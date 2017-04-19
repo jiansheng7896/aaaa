@@ -4,69 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b18cbdb57fdcb01e005eb9d1a365bef1",
-    "content-hash": "44fe057fffac8eaf7cc880dba4049cf1",
+    "hash": "69879e406a43af317353b191656aafd5",
+    "content-hash": "96098e473b028cdb2529580554a1ae3e",
     "packages": [
-        {
-            "name": "chunlei/alipay",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jiansheng7896/alipay.git",
-                "reference": "24b616398966f29d2c682024e1db3684c5cd5892"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jiansheng7896/alipay/zipball/24b616398966f29d2c682024e1db3684c5cd5892",
-                "reference": "24b616398966f29d2c682024e1db3684c5cd5892",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Chunlei\\Alipay\\": "src/Alipay/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "lichunlei",
-                    "email": "nosjoy@163.com"
-                }
-            ],
-            "description": "alipay",
-            "time": "2017-04-13 09:14:34"
-        },
-        {
-            "name": "chunlei/math",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jiansheng7896/test.git",
-                "reference": "4cde9cb12e7399d22997822e461357498d7b07b0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jiansheng7896/test/zipball/4cde9cb12e7399d22997822e461357498d7b07b0",
-                "reference": "4cde9cb12e7399d22997822e461357498d7b07b0",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Chunlei\\Math\\": "src/Math/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "lichunlei",
-                    "email": "nosjoy@163.com"
-                }
-            ],
-            "description": "test",
-            "time": "2017-04-12 11:11:02"
-        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -298,16 +238,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.18",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d15ded55b5e690199393ea93a57edcbae20d1ffc"
+                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d15ded55b5e690199393ea93a57edcbae20d1ffc",
-                "reference": "d15ded55b5e690199393ea93a57edcbae20d1ffc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/02444b7450350db17a7607c8a52f7268ebdb0dad",
+                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +363,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-04-10 19:27:41"
+            "time": "2017-04-16 13:33:34"
         },
         {
             "name": "laravel/tinker",
@@ -3399,10 +3339,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "chunlei/alipay": 20,
-        "chunlei/math": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

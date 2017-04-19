@@ -1,14 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::group(['namespace' => 'Web', 'prefix' => ''], function () {
+    Route::get('/', ['uses' => 'TopController@index', 'as' => 'webTopIndex']);
 
-Route::get('/', ['uses' => 'TopController@index']);
+    Route::group(['middleware' => 'guest:web'], function () {
+        Route::get('/login', ['uses' => 'UserController@getLogin', 'as' => 'webUserGetLogin']);
+        Route::post('/login', ['uses' => 'UserController@postLogin', 'as' => 'webUserPostLogin']);
+        Route::get('/register', ['uses' => 'UserController@getRegister', 'as' => 'webUserGetRegister']);
+        Route::post('/register', ['uses' => 'UserController@postRegister', 'as' => 'webUserPostRegister']);
+    });
+    Route::get('/logout', ['uses' => 'UserController@logout', 'as' => 'webUserLogout']);
+});
+
