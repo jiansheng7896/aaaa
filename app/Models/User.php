@@ -27,7 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function fromDateTime($value){
-        return strtotime(parent::fromDateTime($value));
-    }
+//    public function fromDateTime($value){
+//        return strtotime(parent::fromDateTime($value));
+//    }
 }

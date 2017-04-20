@@ -124,6 +124,8 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
+    'log_max_files' => 2,
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
