@@ -12,10 +12,6 @@ class TopController extends Controller
 
     public function index(Request $request)
     {
-        Models\User::where('id',2)->update([
-            'email' => time(),
-        ]);
-
         return view('web.top.index');
     }
 }

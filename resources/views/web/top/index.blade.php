@@ -74,6 +74,7 @@
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('/password/reset') }}">Reset</a>
                     @endif
                 </div>
             {{--@endif--}}

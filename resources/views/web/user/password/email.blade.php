@@ -15,7 +15,7 @@
 <div role="main">
     <div id="js-pjax-container" data-pjax-container="">
         <div class="auth-form px-3 mt-6" id="login">
-            <form accept-charset="UTF-8" action="{{ route('webUserPostLogin') }}" method="post">
+            <form accept-charset="UTF-8" action="{{ route('webUserSendResetLinkEmail') }}" method="post">
                 @if (count($errors) > 0)
                     <div id="js-flash-container">
                         <div class="flash flash-full flash-error">
@@ -30,18 +30,11 @@
                 <div class="auth-form-body mt-3">
 
                     <label for="login_field">
-                        Username or email address
+                        email address
                     </label>
                     <input autocapitalize="off" autocorrect="off" class="form-control input-block" id="login_field" name="email" tabindex="1" value="{{ old('email') }}" type="text">
 
-                    <label for="password">
-                        Password <a href="https://github.com/password_reset" class="label-link">Forgot password?</a>
-                    </label>
-                    <input autofocus="autofocus" class="form-control form-control input-block" id="password" name="password" tabindex="2" type="password">
-                    <img src="{{ route('webSystemCaptcha') }}" onclick="javascript:this.src='{{ route('webSystemCaptcha') }}?'+Math.random()">
-                    <input class="form-control form-control input-block" name="captcha" tabindex="2" type="password">
-
-                    <input class="btn btn-primary btn-block" data-disable-with="Signing in…" name="commit" tabindex="3" value="Sign in" type="submit">
+                    <input class="btn btn-primary btn-block" data-disable-with="Signing in…" name="commit" tabindex="3" value="Send Password Reset Link" type="submit">
                 </div>
             </form>
         </div>
@@ -50,3 +43,4 @@
 
 </body>
 </html>
+
