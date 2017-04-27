@@ -3,15 +3,20 @@
 namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Auth;
 use App\Models;
+use App\Repositories;
 
-class TopController extends Controller
+class TopController extends BaseController
 {
 
     public function index(Request $request)
     {
-        return view('web.top.index');
+        app(Repositories\User::class)->getName('lee');
+
+
+        return $this->page('web.top.index');
     }
+
+
 }
