@@ -12,6 +12,16 @@ class TopController extends BaseController
 
     public function index(Request $request)
     {
+
+        app(Repositories\User::class)->getName('lee');
+
+
+        app(Repositories\User::class)->getName('lee');
+
+
+        app(Repositories\User::class)->getName('lee');
+
+
         app(Repositories\User::class)->getName('lee');
 
 
