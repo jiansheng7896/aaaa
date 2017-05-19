@@ -28,5 +28,10 @@ class TopController extends BaseController
         return $this->page('web.top.index');
     }
 
+    public function single(Request $request)
+    {
 
+
+        return $this->page('web.top.single');
+    }
 }

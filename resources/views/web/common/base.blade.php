@@ -8,7 +8,7 @@
         <title>{{ config('setting.title') }} @yield('title', '欢迎您')</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{ mix('css/all.css') }}" />
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
 
         <script>
             window.Laravel = '{!! json_encode(['csrfToken' => csrf_token()])  !!}'
@@ -18,7 +18,7 @@
     <body>
 
     <div id="app">
-        @yield('contents')
+        ...
     </div>
 
 

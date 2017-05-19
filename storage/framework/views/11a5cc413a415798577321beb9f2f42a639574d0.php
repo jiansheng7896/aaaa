@@ -1,36 +1,28 @@
-<?php $__env->startSection('title', '首页'); ?>
+<!DOCTYPE html>
+<html lang="<?php echo e(config('app.locale')); ?>">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="<?php echo $__env->yieldContent('keywords', 'keywords'); ?>" />
+    <title><?php echo e(config('setting.title')); ?> <?php echo $__env->yieldContent('title', '欢迎您'); ?></title>
 
-<?php $__env->startSection('css'); ?>
-<?php $__env->stopSection(); ?>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="<?php echo e(mix('css/app.css')); ?>" />
 
-<?php $__env->startSection('contents'); ?>
-    <div class="flex-center position-ref full-height">
-        
-        <div class="top-right links">
-            <?php if(Auth::check()): ?>
-                <a href="<?php echo e(url('/')); ?>">Home</a>
-                <a href="<?php echo e(url('/logout')); ?>">Logout</a>
-            <?php else: ?>
-                <a href="<?php echo e(url('/login')); ?>">Login</a>
-                <a href="<?php echo e(url('/register')); ?>">Register</a>
-                <a href="<?php echo e(url('/password/reset')); ?>">Reset</a>
-            <?php endif; ?>
-        </div>
-        
-
-        <div class="content">
-            首页<?php echo e(!is_null(Auth::user()) ? Auth::user()->name : ''); ?>
-
-        </div>
-    </div>
-<?php $__env->stopSection(); ?>
-
-<?php $__env->startSection('js'); ?>
     <script>
-        $(function(){
-            alert(1111);
-        })
+        window.Laravel = '<?php echo json_encode(['csrfToken' => csrf_token()]); ?>'
     </script>
-<?php $__env->stopSection(); ?>
+    <?php echo $__env->yieldContent('css'); ?>
+</head>
+<body>
 
-<?php echo $__env->make('web.common.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div id="app">
+    ...
+</div>
+
+
+<script src="<?php echo e(mix('js/app.js')); ?>"></script>
+<?php echo $__env->yieldContent('js'); ?>
+</body>
+</html>

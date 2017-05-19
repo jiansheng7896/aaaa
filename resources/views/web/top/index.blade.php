@@ -1,35 +1,28 @@
-@extends('web.common.base')
+<!DOCTYPE html>
+<html lang="{{ config('app.locale') }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="@yield('keywords', 'keywords')" />
+    <title>{{ config('setting.title') }} @yield('title', '欢迎您')</title>
 
-@section('title', '首页')
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
 
-@section('css')
-@endsection
-
-@section('contents')
-    <div class="flex-center position-ref full-height">
-        {{--@if (Route::has('login'))--}}
-        <div class="top-right links">
-            @if (Auth::check())
-                <a href="{{ url('/') }}">Home</a>
-                <a href="{{ url('/logout') }}">Logout</a>
-            @else
-                <a href="{{ url('/login') }}">Login</a>
-                <a href="{{ url('/register') }}">Register</a>
-                <a href="{{ url('/password/reset') }}">Reset</a>
-            @endif
-        </div>
-        {{--@endif--}}
-
-        <div class="content">
-            首页{{ !is_null(Auth::user()) ? Auth::user()->name : ''  }}
-        </div>
-    </div>
-@endsection
-
-@section('js')
     <script>
-        $(function(){
-            alert(1111);
-        })
+        window.Laravel = '{!! json_encode(['csrfToken' => csrf_token()])  !!}'
     </script>
-@endsection
+    @yield('css')
+</head>
+<body>
+
+<div id="app">
+    ...
+</div>
+
+
+<script src="{{ mix('js/app.js') }}"></script>
+@yield('js')
+</body>
+</html>

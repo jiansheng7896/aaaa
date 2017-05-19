@@ -11,18 +11,12 @@ const { mix } = require('laravel-mix');
  |
  */
 
-//mix.css([
-//    'resources/assets/css/common.css',
-//    'resources/assets/css/style.css'
-//], 'public/css/all.css');
-//mix.css('resources/assets/css/common.css', 'public/css');
-
 mix.combine([
+        'resources/assets/css/base.css',
         'resources/assets/css/common.css',
-        'resources/assets/css/style.css'
-    ], 'public/css/all.css')
-    .js('resources/assets/js/app.js', 'public/js')
-    .js('resources/assets/js/common.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+        'resources/assets/css/index.css',
+        'resources/assets/css/setting.css',
+    ], 'public/css/app.css')
+    .js('resources/assets/js/app.js', 'public/js');
 
 mix.version();
