@@ -15,7 +15,7 @@
 <div role="main">
     <div id="js-pjax-container" data-pjax-container="">
         <div class="auth-form px-3 mt-6" id="login">
-            <form accept-charset="UTF-8" action="<?php echo e(route('webUserPostLogin')); ?>" method="post">
+            <form accept-charset="UTF-8" action="<?php echo e(url('/login')); ?>" method="post">
                 <?php if(count($errors) > 0): ?>
                     <div id="js-flash-container">
                         <div class="flash flash-full flash-error">
@@ -40,7 +40,7 @@
                         Password <a href="https://github.com/password_reset" class="label-link">Forgot password?</a>
                     </label>
                     <input autofocus="autofocus" class="form-control form-control input-block" id="password" name="password" tabindex="2" type="password">
-                    <img src="<?php echo e(route('webSystemCaptcha')); ?>" onclick="javascript:this.src='<?php echo e(route('webSystemCaptcha')); ?>?'+Math.random()">
+                    <img src="<?php echo e(url('/captcha')); ?>" onclick="javascript:this.src='<?php echo e(url('/captcha')); ?>?'+Math.random()">
                     <input class="form-control form-control input-block" name="captcha" tabindex="2" type="password">
 
                     <input class="btn btn-primary btn-block" data-disable-with="Signing in…" name="commit" tabindex="3" value="Sign in" type="submit">

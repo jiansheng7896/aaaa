@@ -80,7 +80,12 @@ class UserController extends Controller
         ]);
 
         $user = new Models\User();
-        $user->name = $request->input('email');
+        $user->username = $request->input('email');
+        $user->nickname = $request->input('email');
+        $user->avatar = $request->input('email');
+        $user->sex = 1;
+        $user->mobile = 1;
+        $user->register_time = 1;
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         $user->save();

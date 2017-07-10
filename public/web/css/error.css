@@ -1,0 +1,42 @@
+.info-content {
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.8rem;
+}
+.info-content.error:before {
+	width: 4rem;
+	height: 4rem;
+	content: '';
+	background: url(../img/error-icon.png) no-repeat center center;
+	background-size: cover;
+	margin-top: 2.5rem;
+}
+.info-content .i-p {
+	font-size: 1.6rem;
+	color: #000;
+	font-weight: bold;
+	line-height: 5rem
+}
+.info-content .i-r {
+	font-size: 1rem;
+	color: #c8161e;
+	line-height: 1.5rem;
+}
+.phone-content {
+	line-height: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 1rem;
+}
+.phone-content p {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #666666;
+}
+.phone-content a {
+	color: #c8161e;
+	font-size: 1.2rem;
+}

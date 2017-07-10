@@ -1,0 +1,43 @@
+.content {
+	padding-top: 0;
+}
+.mine-header {
+	width: 100%;
+	height: 11rem;
+	background: url(../img/mine-bg.png) no-repeat center center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mine-header .avatar {
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.mine-header span {
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-top: 0.8rem;
+}
+.mine-header .avatar img {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+	border: solid 1px #fff;
+}
+.list-content {
+	margin-top: 0;
+}
+.list-content .list-item {
+	height: 4.5rem;
+}
+.list-content .list-item .word {
+	font-size: 1.2rem;
+}
+.list-content .list-item .word:after {
+	content: '';
+	width: 0;
+}

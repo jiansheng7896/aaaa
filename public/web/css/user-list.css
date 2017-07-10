@@ -1,0 +1,130 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.search-content {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	margin-top: 1rem;
+	position: fixed;
+}
+.search {
+	width: 90%;
+	height: 3rem;
+	border: solid 1px #c8161e;
+	border-radius: 1.25rem;
+	background: #ffffff;
+	padding: 0 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+.search.zoom:before {
+	width: 1.2rem;
+	height: 1.2rem;
+	content: '';
+	background: url(../img/search-icon.png) no-repeat center center;
+	background-size: cover;
+	margin-right: 0.5rem;
+}
+.search input {
+	height: 100%;
+	border-radius: 0 1.25rem 1.25rem 0;
+	flex: 1;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.placeholder-fix {
+	height: 4rem;
+	background: #f5f5f5;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+.list-item {
+	min-height: 5.5rem;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 0.1rem;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	justify-content: center;
+	padding: 0 2rem 0.5rem 2rem;
+
+}
+.list-item .item-header,
+.list-item .item-footer
+{
+	display: flex;
+	align-items: center;
+	font-size: 0.9rem;
+	font-weight: normal;
+	margin-top: 0.5rem;
+}
+.list-item .item-header {
+	justify-content: space-between;
+}
+.list-item  span,
+.list-item p {
+	color: #999999;
+}
+/*==========客户列表===========*/
+.user-item .address:before {
+	display: inline-block;
+	width: 1.2rem;
+	height: 1.2rem;
+	content: '';
+	background: url(../img/pos-icon.png) no-repeat center center;
+	background-size: cover;
+	margin-right: 0.2rem;
+}
+.user-item .item-header {
+	font-size: 1.3rem;
+	color: #000;
+	font-weight: bold;
+}
+/*=========合同列表=============*/
+.contract-item .item-header p:first-child {
+}
+.contract-item .item-footer {
+	font-size: 1.3rem;
+	color: #000;
+	font-weight: bold;
+}
+/*=========咨询列表=============*/
+.list-tab {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 0.2rem;
+	padding: 0 1rem;
+}
+.list-tab li{
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	color: #666666;
+	font-size: 1rem;
+	text-align: center;
+	font-weight: bold;
+
+}
+.list-tab li.active {
+	color: #c8161e;
+	border-bottom: solid 3px #c8161e;
+}
+.consult-item .item-header p:first-child{
+	font-size: 1.2rem;
+	color: #000;
+	font-weight: bold;
+}
+.consult-item .item-footer {
+	color: #999999;
+	font-weight: bold;
+}

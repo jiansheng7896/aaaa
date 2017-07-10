@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html lang="<?php echo e(config('app.locale')); ?>">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="<?php echo $__env->yieldContent('keywords', 'keywords'); ?>" />
-        <title><?php echo e(config('setting.title')); ?> <?php echo $__env->yieldContent('title', '欢迎您'); ?></title>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="<?php echo $__env->yieldContent('keywords', config('app.name')); ?>" />
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>" />
+    <title><?php echo e(config('app.name')); ?>-<?php echo $__env->yieldContent('title'); ?></title>
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('web/css/base.css')); ?>" />
+    <?php echo $__env->yieldContent('css'); ?>
+    <script type="text/javascript" src="<?php echo e(asset('web/js/jquery.min.js')); ?>"></script>
+</head>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="<?php echo e(mix('css/all.css')); ?>" />
+<body>
+<?php echo $__env->yieldContent('content'); ?>
 
-        <script>
-            window.Laravel = '<?php echo json_encode(['csrfToken' => csrf_token()]); ?>'
-        </script>
-        <?php echo $__env->yieldContent('css'); ?>
-    </head>
-    <body>
-
-    <div id="app">
-        <?php echo $__env->yieldContent('contents'); ?>
-    </div>
-
-
-    <script src="<?php echo e(mix('js/app.js')); ?>"></script>
-    <script src="<?php echo e(mix('js/common.js')); ?>"></script>
-    <?php echo $__env->yieldContent('js'); ?>
-    </body>
+<script src="<?php echo e(asset('web/plugins/layer/layer.js')); ?>"></script>
+<?php echo $__env->yieldContent('js'); ?>
+</body>
 </html>

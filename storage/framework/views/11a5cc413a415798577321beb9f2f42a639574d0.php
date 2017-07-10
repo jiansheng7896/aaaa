@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="<?php echo e(config('app.locale')); ?>">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="<?php echo $__env->yieldContent('keywords', 'keywords'); ?>" />
-    <title><?php echo e(config('setting.title')); ?> <?php echo $__env->yieldContent('title', '欢迎您'); ?></title>
+<?php $__env->startSection('title', '首页'); ?>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="<?php echo e(mix('css/app.css')); ?>" />
+<?php $__env->startSection('css'); ?>
 
-    <script>
-        window.Laravel = '<?php echo json_encode(['csrfToken' => csrf_token()]); ?>'
-    </script>
-    <?php echo $__env->yieldContent('css'); ?>
-</head>
-<body>
+<?php $__env->stopSection(); ?>
 
-<div id="app">
-    ...
-</div>
+<?php $__env->startSection('content'); ?>
+    <div class="top-right links">
+        <?php if(Auth::check()): ?>
+            <a href="<?php echo e(url('/home')); ?>">Home</a>
+            <a href="<?php echo e(url('/logout')); ?>">Logout</a>
+        <?php else: ?>
+            <a href="<?php echo e(url('/login')); ?>">Login</a>
+            <a href="<?php echo e(url('/register')); ?>">Register</a>
+        <?php endif; ?>
+    </div>
+<?php $__env->stopSection(); ?>
 
-
-<script src="<?php echo e(mix('js/app.js')); ?>"></script>
-<?php echo $__env->yieldContent('js'); ?>
-</body>
-</html>
+<?php echo $__env->make('web.common.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

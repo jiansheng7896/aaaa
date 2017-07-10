@@ -15,7 +15,7 @@
 <div role="main">
     <div id="js-pjax-container" data-pjax-container="">
         <div class="auth-form px-3 mt-6" id="login">
-            <form accept-charset="UTF-8" action="{{ route('webUserPostRegister') }}" method="post">
+            <form accept-charset="UTF-8" action="{{ url('/register') }}" method="post">
                 @if (count($errors) > 0)
                     <div id="js-flash-container">
                         <div class="flash flash-full flash-error">
@@ -28,6 +28,10 @@
 
                 {{ csrf_field() }}
                 <div class="auth-form-body mt-3">
+                    <label for="login_field">
+                        nickname
+                    </label>
+                    <input class="form-control input-block" name="nickname" tabindex="1" value="{{ old('nickname') }}" type="text">
 
                     <label for="login_field">
                         Username or email address

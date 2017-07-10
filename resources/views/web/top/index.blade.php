@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="@yield('keywords', 'keywords')" />
-    <title>{{ config('setting.title') }} @yield('title', '欢迎您')</title>
+@extends('web.common.base')
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+@section('title', '首页')
 
-    <script>
-        window.Laravel = '{!! json_encode(['csrfToken' => csrf_token()])  !!}'
-    </script>
-    @yield('css')
-</head>
-<body>
+@section('css')
 
-<div id="app">
-    ...
-</div>
+@endsection
 
-
-<script src="{{ mix('js/app.js') }}"></script>
-@yield('js')
-</body>
-</html>
+@section('content')
+    <div class="top-right links">
+        @if (Auth::check())
+            <a href="{{ url('/home') }}">Home</a>
+            <a href="{{ url('/logout') }}">Logout</a>
+        @else
+            <a href="{{ url('/login') }}">Login</a>
+            <a href="{{ url('/register') }}">Register</a>
+        @endif
+    </div>
+@endsection

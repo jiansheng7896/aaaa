@@ -1,0 +1,20 @@
+.detail-info {
+	width: 100%;
+	height: auto;
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	line-height: 2rem;
+	background: #fff;
+	margin-bottom: 0.3rem;
+	font-weight: bold;
+}
+.detail-info label {
+	color: #666666;
+}
+.form-title {
+	background: #fff;
+}
+.textarea, textarea {
+	font-weight: normal;
+	margin-bottom: 0.3rem;
+}

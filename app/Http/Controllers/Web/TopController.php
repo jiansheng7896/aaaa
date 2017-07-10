@@ -24,7 +24,6 @@ class TopController extends BaseController
 
         app(Repositories\User::class)->getName('lee');
 
-
         return $this->page('web.top.index');
     }
 
